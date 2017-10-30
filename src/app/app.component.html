@@ -8,6 +8,25 @@
         <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
         <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
       </ol>
+
+    <div class="col-xs-8">
+        <button class="btn btn-primary" (click)="onButtonClick()">Display Details</button>
+
+        <div class="details">
+          <p *ngIf='showDetails'>The answer is ... 42.</p>
+        </div>
+
+        <ul>
+          <li
+            *ngFor='let log of clickLog'
+            [ngClass]="{highlight: log.count > 4}"
+            [ngStyle]="{backgroundColor: log.count > 4 ? 'blue' : 'inherit'}">
+            Button has been clicked <strong>{{log.count}} time<span *ngIf='log.count > 1'>s</span>.</strong> Last time clicked was <strong>{{log.time}}.</strong>
+          </li>
+        </ul>
+
+    </div>
+
     </div>
   </div>
 </div>

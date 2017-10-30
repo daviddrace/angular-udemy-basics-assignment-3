@@ -1,0 +1,19 @@
+p{
+  font-size:1.25em;
+
+}
+
+.details{
+  height:50px;
+  padding:10px 0;
+}
+
+.highlight{
+  color:white;
+}
+
+ul{padding-left:0;}
+
+li{
+  list-style-type: none;
+}
